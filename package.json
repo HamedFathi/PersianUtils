@@ -1,0 +1,36 @@
+{
+  "name": "PersianUtils",
+  "version": "1.0.0",
+  "description": "This PersianUtils library is inspired by persian.js in https://github.com/usablica/persian.js",
+  "keywords": [
+    "persian"
+  ],
+  "homepage": "https://github.com/HamedFathi/PersianUtils",
+  "bugs": {
+    "url": "https://github.com/HamedFathi/PersianUtils/issues"
+  },
+  "license": "MIT",
+  "author": "Hamed Fathi <hamedfathi.contact@gmail.com>",
+  "main": "dist/commonjs/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HamedFathi/PersianUtils"
+  },
+  "typings": "dist/commonjs/index.d.ts",
+  "scripts": {
+    "build": "./node_modules/.bin/gulp"
+  },
+  "devDependencies": {
+    "@types/gulp": "^4.0.5",
+    "@types/gulp-plumber": "0.0.32",
+    "@types/gulp-typescript": "^2.13.0",
+    "@types/merge2": "^1.1.4",
+    "@types/run-sequence": "0.0.30",
+    "@types/typescript": "^2.0.0",
+    "gulp": "^3.9.1",
+    "gulp-run": "^1.7.1",
+    "gulp-typescript": "^3.2.3",
+    "run-sequence": "^2.2.0",
+    "typescript": "^2.6.2"
+  }
+}
