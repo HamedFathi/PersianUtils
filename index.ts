@@ -1,3 +1,3 @@
-import { Jalaali } from "./jalaali";
 import { PersianUtils } from "./PersianUtils";
-export { Jalaali, PersianUtils };
+import './jalali.js';
+export { PersianUtils };
