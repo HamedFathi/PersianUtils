@@ -1,7 +1,7 @@
 interface JalaliDate {
-  jalaliToGregorian(year: number, month: number, day: number): string;
+  jalaliToGregorian(year: number, month: number, day: number): string[];
   checkDate(year: number, month: number, day: number): boolean;
-  gregorianToJalali(year: number, month: number, day: number): string;
+  gregorianToJalali(year: number, month: number, day: number): string[];
 }
 
 interface Date {
