@@ -14,42 +14,11 @@ export interface BaseNumber {
 }
 
 export class PersianUtils {
-  private arNumbers: BaseNumber = {
-    one: "١",
-    two: "٢",
-    three: "٣",
-    four: "٤",
-    five: "٥",
-    six: "٦",
-    seven: "٧",
-    eight: "٨",
-    night: "٩",
-    zero: "٠"
-  };
-  private faNumbers: BaseNumber = {
-    one: "۱",
-    two: "۲",
-    three: "۳",
-    four: "۴",
-    five: "۵",
-    six: "۶",
-    seven: "۷",
-    eight: "۸",
-    night: "۹",
-    zero: "۰"
-  };
-  private enNumbers: BaseNumber = {
-    one: "1",
-    two: "2",
-    three: "3",
-    four: "4",
-    five: "5",
-    six: "6",
-    seven: "7",
-    eight: "8",
-    night: "9",
-    zero: "0"
-  };
+  // Declare Number Arrays in different locales
+  private arabicNumbers = ["١", "٢", "٣", "٤", "٥", "٦", "٧", "٨", "٩", "٠"];
+  private persianNumbers = ["۱", "۲", "۳", "۴", "۵", "۶", "۷", "۸", "۹", "۰"];
+  private englishNumbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+
   private replaceAll(
     text: string,
     search: string,
@@ -60,27 +29,63 @@ export class PersianUtils {
   constructor(private text: string) {}
 
   public convertEnToFaNumbers(text: string): string {
-    /*for (let index = 0; index < 10; index++) {
-           Object.values() 
-
-    }*/
-
-    
-    return "";
+    for (let i = 0; i < 10; i++) {
+      text = this.replaceAll(
+        text,
+        this.englishNumbers[i],
+        this.persianNumbers[i]
+      );
+    }
+    return text;
   }
   public convertEnToArNumbers(text: string): string {
+    for (let i = 0; i < 10; i++) {
+      text = this.replaceAll(
+        text,
+        this.englishNumbers[i],
+        this.arabicNumbers[i]
+      );
+    }
     return "";
   }
   public convertArToEnNumbers(text: string): string {
+    for (let i = 0; i < 10; i++) {
+      text = this.replaceAll(
+        text,
+        this.arabicNumbers[i],
+        this.englishNumbers[i]
+      );
+    }
     return "";
   }
   public convertArToFaNumbers(text: string): string {
+    for (let i = 0; i < 10; i++) {
+      text = this.replaceAll(
+        text,
+        this.arabicNumbers[i],
+        this.persianNumbers[i]
+      );
+    }
     return "";
   }
   public convertFaToEnNumbers(text: string): string {
+    for (let i = 0; i < 10; i++) {
+      text = this.replaceAll(
+        text,
+        this.persianNumbers[i],
+        this.englishNumbers[i]
+      );
+    }
     return "";
   }
   public convertFaToArNumbers(text: string): string {
+    for (let i = 0; i < 10; i++) {
+      text = this.replaceAll(
+        text,
+        this.persianNumbers[i],
+        this.arabicNumbers[i]
+      );
+    }
     return "";
   }
 }
